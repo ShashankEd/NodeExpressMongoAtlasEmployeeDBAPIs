@@ -1,0 +1,1 @@
+export const mongoDbConnectionURI = "mongodb+srv://admin:db1234@cluster0.zfthbhg.mongodb.net/employee?retryWrites=true&w=majority"
