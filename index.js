@@ -1,10 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
-// import {getEmployees, addEmployee} from './src/employees.js'
 import {mongoDbConnectionURI} from './secret.js'
-
-// import {runDB} from './src/connectionTest.js'
-
 import routes from './src/routes/route.js'
 
 const PORT = 3000
@@ -31,7 +27,6 @@ app.listen(PORT, () => {
     console.log("Server running on port 3000");
 });
 
-// await runDB()
 
 
 
