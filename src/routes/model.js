@@ -20,3 +20,17 @@ const dataSchema = new Schema({
 })
 
 export const Model = mongoose.model('Data', dataSchema)
+
+//User scehma
+const userSchema = new Schema({
+    username: {
+        required: true,
+        type: String
+    },
+    password: {
+        required: true,
+        type: String
+    },
+})
+
+export const UserModel = mongoose.model('user', userSchema)
