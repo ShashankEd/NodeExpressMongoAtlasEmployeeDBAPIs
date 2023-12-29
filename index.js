@@ -1,6 +1,5 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import {mongoDbConnectionURI} from './secret.js'
 import routes from './src/routes/route.js'
 import 'dotenv/config.js'
 // console.log(process.env)
@@ -13,7 +12,7 @@ app.use(express.urlencoded(
 app.use(express.json())
 app.use('/api',routes)
 
-mongoose.connect(process.env.DATABASE_URL || mongoDbConnectionURI);
+mongoose.connect(process.env.DATABASE_URL);
 const database = mongoose.connection;
 
 database.on('error', (error) => {
@@ -26,7 +25,7 @@ database.once('connected', () => {
 
 
 app.listen(PORT, () => {
-    console.log("Server running on port 3000");
+    console.log("Server running on port "+ PORT);
 });
 
 

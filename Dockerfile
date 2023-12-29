@@ -9,7 +9,6 @@ RUN apt-get install -y nodejs
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 COPY index.js main.js
-COPY secret.js secret.js
 COPY src src
 
 RUN npm install
